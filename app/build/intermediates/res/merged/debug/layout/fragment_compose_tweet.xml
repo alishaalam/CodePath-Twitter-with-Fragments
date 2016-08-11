@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codepath.apps.twitterville.activities.TimeLineActivity">
+
+    <TextView
+        android:id="@+id/tv_username"
+        tools:text="Your name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_tweet_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="140"
+        android:layout_below="@+id/tv_username"
+        tools:text="Compose Tweet Body"
+        android:hint="@string/tweet_hint"
+        />
+
+    <Button
+        android:id="@+id/btn_send_tweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/tweet"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/et_tweet_body"
+        android:layout_alignRight="@+id/et_tweet_body"
+        android:onClick="onTweetSubmit"
+        />
+
+
+</RelativeLayout>
