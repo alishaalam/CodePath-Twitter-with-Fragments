@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.codepath.apps.twitterville.activities.ProfileActivity"
+    tools:showIn="@layout/activity_profile">
+
+
+    <ImageView
+        android:id="@+id/user_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:outlineProvider="background"
+        tools:src="@drawable/ic_checked_user" />
+
+    <ImageView
+        android:id="@+id/user_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_fav_star"
+        android:layout_toLeftOf="@+id/user_follow"
+        android:layout_alignParentTop="true"
+        android:outlineProvider="paddedBounds"
+        android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        tools:text="CNBC"
+        android:layout_below="@+id/user_fav"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:typeface="serif"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+
+    <TextView
+        android:id="@+id/user_screen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\@cnbc"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_below="@+id/user_name"/>
+
+    <TextView
+        android:id="@+id/user_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_screen_name"
+        android:layout_below="@+id/user_screen_name"
+        android:layout_marginTop="10dp"
+        tools:text="First in Business Worldwide"
+        android:gravity="left"
+        android:typeface="serif"
+        android:lineSpacingExtra="6dp"
+        android:textIsSelectable="true"
+        android:autoLink="web"
+        android:linksClickable="true"
+        />
+
+</RelativeLayout>

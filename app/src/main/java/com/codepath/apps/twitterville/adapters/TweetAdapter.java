@@ -1,32 +1,44 @@
 package com.codepath.apps.twitterville.adapters;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.codepath.apps.twitterville.R;
+import com.codepath.apps.twitterville.helper.IViewHolderClickedListener;
 import com.codepath.apps.twitterville.models.Tweet;
-import com.codepath.apps.twitterville.viewholder.TweetViewHolder;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by alishaalam on 8/5/16.
  */
-public class TweetAdapter extends RecyclerView.Adapter<TweetViewHolder> {
+public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.TweetViewHolder>{
 
     Context mContext;
     ArrayList<Tweet> mTweetsList = new ArrayList<Tweet>();
+    Tweet mTweet;
     private static final String TAG = TweetAdapter.class.getSimpleName();
+    private static IViewHolderClickedListener mListener;
+
+    public void setIViewHolderClickedListener(IViewHolderClickedListener listener){
+        this.mListener = listener;
+
+    }
 
     public TweetAdapter(Context mContext, ArrayList<Tweet> mTweetsList) {
         this.mContext = mContext;
@@ -43,29 +55,28 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(TweetViewHolder tweetViewHolder, int position) {
-        Tweet tweet = mTweetsList.get(position);
-        if(tweet != null) {
+    public void onBindViewHolder(TweetViewHolder tweetViewHolder, final int position) {
+        mTweet = mTweetsList.get(position);
+
+        if(mTweet != null) {
 
             Glide.with(mContext)
-                    .load(tweet.getUser().getProfileImageUrl())
+                    .load(mTweet.getUser().getProfileImageUrl())
                     .placeholder(R.mipmap.ic_launcher)
                     .into(tweetViewHolder.vTweetProfilePic);
 
-            tweetViewHolder.vTweetScreenName.setText(tweet.getUser().getScreenName());
+
+            tweetViewHolder.vTweetScreenName.setText(mTweet.getUser().getFormattedScreenName());
             tweetViewHolder.vTweetScreenName.setMovementMethod(LinkMovementMethod.getInstance());
 
-            tweetViewHolder.vTweetName.setText(tweet.getUser().getName());
+            tweetViewHolder.vTweetName.setText(mTweet.getUser().getName());
 
-            tweetViewHolder.vTweetBody.setText(tweet.getBody());
+            tweetViewHolder.vTweetBody.setText(mTweet.getBody());
             tweetViewHolder.vTweetBody.setMovementMethod(LinkMovementMethod.getInstance());
 
-            String tweetAge = getTweetAge(tweet.getTweetTime());
+            String tweetAge = getTweetAge(mTweet.getTweetTime());
             tweetViewHolder.vTweetAge.setText(tweetAge);
 
-           /* Glide.with(mContext)
-                    .load(tweet)
-                    .into(tweetViewHolder.vTweetPic);*/
         }
     }
 
@@ -86,7 +97,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetViewHolder> {
             e.printStackTrace();
         }
         String tweetAge = DateUtils.getRelativeTimeSpanString(formattedTimeInSecs, System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS).toString();
-        Log.v(TAG, "tweetAge:" + tweetAge);
         tweetAge = tweetAge.replace(" second ago","s");
         tweetAge = tweetAge.replace(" seconds ago","s");
         tweetAge = tweetAge.replace(" minute ago","m");
@@ -95,7 +105,6 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetViewHolder> {
         tweetAge = tweetAge.replace(" hours ago","h");
         tweetAge = tweetAge.replace(" day ago","d");
         tweetAge = tweetAge.replace(" days ago","d");
-        Log.v(TAG, "tweetAge:" + tweetAge);
         return tweetAge;
     }
 
@@ -111,5 +120,50 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetViewHolder> {
     public void addAll(List<Tweet> list) {
         mTweetsList.addAll(list);
         notifyDataSetChanged();
+    }
+
+    public static class TweetViewHolder extends RecyclerView.ViewHolder{
+
+        @BindView(R.id.iv_profile_pic)
+        public ImageView vTweetProfilePic;
+
+        @BindView(R.id.tv_screen_name)
+        public TextView vTweetScreenName;
+
+        @BindView(R.id.tv_name)
+        public TextView vTweetName;
+
+        @BindView(R.id.tv_body)
+        public TextView vTweetBody;
+
+        @Nullable @BindView(R.id.tv_age)
+        public TextView vTweetAge;
+
+        @Nullable @BindView(R.id.iv_tweet_pic)
+        public ImageView vTweetPic;
+
+
+        public TweetViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this,itemView);
+            vTweetProfilePic.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null)
+                        mListener.onProfilePicClicked(v, getAdapterPosition());
+
+                }
+            });
+
+            vTweetBody.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null){
+                        mListener.onTweetClicked(v, getAdapterPosition());
+                    }
+                }
+            });
+        }
+
     }
 }

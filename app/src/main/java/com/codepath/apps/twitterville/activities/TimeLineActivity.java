@@ -17,11 +17,11 @@ import android.widget.Toast;
 import com.codepath.apps.twitterville.R;
 import com.codepath.apps.twitterville.adapters.TweetAdapter;
 import com.codepath.apps.twitterville.fragments.ComposeTweetDialogFragment;
-import com.codepath.apps.twitterville.helper.ClickListener;
 import com.codepath.apps.twitterville.helper.EndlessRecyclerViewScrollListener;
 import com.codepath.apps.twitterville.helper.FragmentUtil;
-import com.codepath.apps.twitterville.helper.RecyclerTouchListener;
+import com.codepath.apps.twitterville.helper.IViewHolderClickedListener;
 import com.codepath.apps.twitterville.models.Tweet;
+import com.codepath.apps.twitterville.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
@@ -33,7 +33,7 @@ import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
 
-public class TimeLineActivity extends AppCompatActivity implements ComposeTweetDialogFragment.OnTweetPostedListener{
+public class TimeLineActivity extends AppCompatActivity implements ComposeTweetDialogFragment.OnTweetPostedListener {
 
     private static final String TAG = TimeLineActivity.class.getSimpleName();
     private TwitterClient client;
@@ -109,6 +109,23 @@ public class TimeLineActivity extends AppCompatActivity implements ComposeTweetD
         recyclerView.setAdapter(tweetAdapter);
         recyclerView.setHasFixedSize(true);
 
+        tweetAdapter.setIViewHolderClickedListener(new IViewHolderClickedListener() {
+            @Override
+            public void onProfilePicClicked(View screeName, int position) {
+                Tweet tweet = tweetsList.get(position);
+                getUserForScreenName(tweet.getUser().getScreenName());
+            }
+
+            @Override
+            public void onTweetClicked(View t, int position) {
+                Tweet tweet = tweetsList.get(position);
+                Intent intent = new Intent(TimeLineActivity.this, TweetDetailActivity.class);
+                intent.putExtra(TweetDetailActivity.ARG_ITEM, Parcels.wrap(tweet));
+                startActivity(intent);
+
+            }
+        });
+
         //Handling endless scrolling
         recyclerView.addOnScrollListener(new EndlessRecyclerViewScrollListener(linearLayoutManager) {
             @Override
@@ -120,20 +137,20 @@ public class TimeLineActivity extends AppCompatActivity implements ComposeTweetD
         });
 
         //Adding on item click handling
-        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
+        /*recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Tweet tweet = tweetsList.get(position);
-                Intent intent = new Intent(TimeLineActivity.this, TweetDetailActivity.class);
-                intent.putExtra(TweetDetailActivity.ARG_ITEM, Parcels.wrap(tweet));
-                startActivity(intent);
+                    Tweet tweet = tweetsList.get(position);
+                    Intent intent = new Intent(TimeLineActivity.this, TweetDetailActivity.class);
+                    intent.putExtra(TweetDetailActivity.ARG_ITEM, Parcels.wrap(tweet));
+                    startActivity(intent);
             }
 
             @Override
             public void onLongClick(View view, int position) {
 
             }
-        }));
+        }));*/
     }
 
     private void populateTimeLine(long max_id) {
@@ -162,9 +179,8 @@ public class TimeLineActivity extends AppCompatActivity implements ComposeTweetD
         tweetAdapter.notifyDataSetChanged();
     }
 
-    @Override
     public void onPostTweet(String tweetBody) {
-        client.postTweet(tweetBody, new JsonHttpResponseHandler(){
+        client.postTweet(tweetBody, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject jsonResponse) {
                 super.onSuccess(statusCode, headers, jsonResponse);
@@ -179,6 +195,36 @@ public class TimeLineActivity extends AppCompatActivity implements ComposeTweetD
                 displayErrorResponse();
             }
         });
+    }
+
+
+    private void getUserForScreenName(String screenName) {
+        client.getUserForScreenName(screenName, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                Log.d(TAG, "onProfilePicClicked Response" + response.toString());
+                parseJsonResponseToUser(response);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                displayErrorResponse();
+            }
+        });
+    }
+
+    private void parseJsonResponseToUser(JSONObject response) {
+        User user = User.fromUserJSON(response);
+        startDetailActivity(user);
+    }
+
+    private void startDetailActivity(User user) {
+        Intent intent = new Intent(TimeLineActivity.this, ProfileActivity.class);
+        intent.putExtra(ProfileActivity.ARG_ITEM, Parcels.wrap(user));
+        startActivity(intent);
+        Log.d(TAG, "Starting Profile Activity");
     }
 
     private void parseJsonResponseToTweets(JSONArray jsonResponse) {
@@ -200,13 +246,10 @@ public class TimeLineActivity extends AppCompatActivity implements ComposeTweetD
 
     public static long getLowestId(List<Tweet> list) {
         long min = Long.MAX_VALUE;
-        for(Tweet t: list) {
-            Log.d(TAG, "ID: " + t.getUid());
-            if(t.getUid() < min)
+        for (Tweet t : list) {
+            if (t.getUid() < min)
                 min = t.getUid();
         }
         return min;
     }
-
-
 }

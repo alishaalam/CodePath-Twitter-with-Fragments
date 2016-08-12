@@ -43,11 +43,20 @@
         </activity>
         <activity
             android:name=".activities.TimeLineActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/title_activity_time_line"/>
+            android:label="@string/title_activity_time_line"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.TweetDetailActivity"
             android:label="@string/title_activity_tweet_detail"
+            android:parentActivityName=".activities.TimeLineActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codepath.apps.twitterville.activities.TimeLineActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/title_activity_profile"
             android:parentActivityName=".activities.TimeLineActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

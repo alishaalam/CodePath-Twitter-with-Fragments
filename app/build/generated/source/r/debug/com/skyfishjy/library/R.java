@@ -20,8 +20,8 @@ public final class R {
 		public static final int rippelColor = 0x7f0b0043;
 	}
 	public static final class dimen {
-		public static final int rippleRadius = 0x7f080071;
-		public static final int rippleStrokeWidth = 0x7f080072;
+		public static final int rippleRadius = 0x7f080072;
+		public static final int rippleStrokeWidth = 0x7f080073;
 	}
 	public static final class id {
 		public static final int fillRipple = 0x7f0c0038;

@@ -8,11 +8,10 @@ import java.util.Set;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import org.parceler.Generated;
-import org.parceler.InjectionUtil;
 import org.parceler.ParcelWrapper;
 import org.parceler.ParcelerRuntimeException;
 
-@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-08T13:19-0700")
+@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-12T14:27-0700")
 @SuppressWarnings({
     "unchecked",
     "deprecation"
@@ -57,7 +56,7 @@ public class Tweet$$Parcelable
                     parcel$$1 .writeLong(tweet$$1 .user_id);
                 }
                 parcel$$1 .writeString(tweet$$1 .body);
-                com.codepath.apps.twitterville.models.User$$Parcelable.write(InjectionUtil.getField(com.codepath.apps.twitterville.models.User.class, com.codepath.apps.twitterville.models.Tweet.class, tweet$$1, "user"), parcel$$1, flags$$0, identitySet$$0);
+                com.codepath.apps.twitterville.models.User$$Parcelable.write(tweet$$1 .user, parcel$$1, flags$$0, identitySet$$0);
             }
         }
     }
@@ -108,8 +107,8 @@ public class Tweet$$Parcelable
             }
             tweet$$5 .user_id = long$$1;
             tweet$$5 .body = parcel$$3 .readString();
-            com.codepath.apps.twitterville.models.User user$$0 = com.codepath.apps.twitterville.models.User$$Parcelable.read(parcel$$3, identityMap$$0);
-            InjectionUtil.setField(com.codepath.apps.twitterville.models.Tweet.class, tweet$$5, "user", user$$0);
+            User user$$0 = com.codepath.apps.twitterville.models.User$$Parcelable.read(parcel$$3, identityMap$$0);
+            tweet$$5 .user = user$$0;
             tweet$$3 = tweet$$5;
         }
         return tweet$$3;

@@ -208,6 +208,7 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -298,6 +299,8 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="login_label">Connect with Twitter</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_test">Test</string>
     <string name="title_activity_time_line">Timeline</string>
     <string name="title_activity_tweet_detail">Tweet</string>
     <string name="tweet">Tweet</string>

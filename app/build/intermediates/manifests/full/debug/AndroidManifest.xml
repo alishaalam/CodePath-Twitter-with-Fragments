@@ -58,6 +58,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codepath.apps.twitterville.activities.TimeLineActivity" />
         </activity>
+        <activity
+            android:name="com.codepath.apps.twitterville.activities.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName="com.codepath.apps.twitterville.activities.TimeLineActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codepath.apps.twitterville.activities.TimeLineActivity" />
+        </activity>
     </application>
 
 </manifest>

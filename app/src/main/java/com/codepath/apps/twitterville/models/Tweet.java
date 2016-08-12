@@ -23,7 +23,7 @@ public class Tweet extends Model {
     @Column(name = "user_id")
     public Long user_id;
 
-    private User user;
+    public User user;
 
     @Column(name = "CreatedAt")
     String createdAt;

@@ -19,6 +19,8 @@ public class User extends Model {
 
     public String screenName;
     public String profileImageUrl;
+    public String profileBackgroundImageUrl;
+    public String description;
 
     public User(){ super(); }
 
@@ -38,8 +40,34 @@ public class User extends Model {
         return u;
     }
 
+
+    public static User fromUserJSON(JSONObject json) {
+        User u = new User();
+        try {
+            u.name = json.getString("name");
+            u.uid = json.getLong("id");
+            u.screenName = json.getString("screen_name");
+            u.description = json.getString("description");
+            u.profileImageUrl = json.getString("profile_image_url");
+            u.profileBackgroundImageUrl = json.getString("profile_banner_url");
+            u.save();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return u;
+    }
+
     public String getProfileImageUrl() {
         return profileImageUrl;
+    }
+
+    public String getProfileBackgroundImageUrl() {
+        return profileBackgroundImageUrl;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public String getName() {
@@ -50,8 +78,12 @@ public class User extends Model {
         return uid;
     }
 
-    public String getScreenName() {
+    public String getFormattedScreenName() {
         return String.format("@%s", screenName);
+    }
+
+    public String getScreenName() {
+        return screenName;
     }
 
     public static User fromUserId(Long userId) {
