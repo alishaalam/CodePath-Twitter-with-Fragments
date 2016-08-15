@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.TimeLineActivity"
-    android:background="@color/colorAccent">
-
+    tools:context=".activities.TimeLineActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -19,32 +17,51 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@android:color/black"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            tools:text="Title 1">
+            >
 
             <TextView
                 android:id="@+id/tv_title_custom_font"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="left|center"
-                android:titleTextColor="@color/colorAccent"
-                tools:text="Title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                tools:text="Title Toolbar" />
 
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/tweets_list_view" />
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/app_bar"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:pstsDividerColor="@color/colorPrimary"
+        app:pstsIndicatorColor="@color/colorAccent"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true"
+        tools:text="Tab Title" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_compose_tweet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_tweet" />
 
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

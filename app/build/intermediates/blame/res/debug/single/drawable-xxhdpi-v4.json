@@ -80,6 +80,10 @@
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_action_star_grey.png",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/drawable-xxhdpi/ic_action_star_grey.png"
+    },
+    {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
@@ -182,6 +186,10 @@
     {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_user_account.png",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/drawable-xxhdpi/ic_user_account.png"
     },
     {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",

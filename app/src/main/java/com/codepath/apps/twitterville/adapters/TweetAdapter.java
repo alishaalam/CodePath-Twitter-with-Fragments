@@ -146,21 +146,15 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.TweetViewHol
         public TweetViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
-            vTweetProfilePic.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(mListener != null)
-                        mListener.onProfilePicClicked(v, getAdapterPosition());
+            vTweetProfilePic.setOnClickListener(v -> {
+                if(mListener != null)
+                    mListener.onProfilePicClicked(v, getAdapterPosition());
 
-                }
             });
 
-            vTweetBody.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(mListener != null){
-                        mListener.onTweetClicked(v, getAdapterPosition());
-                    }
+            vTweetBody.setOnClickListener(v -> {
+                if(mListener != null){
+                    mListener.onTweetClicked(v, getAdapterPosition());
                 }
             });
         }

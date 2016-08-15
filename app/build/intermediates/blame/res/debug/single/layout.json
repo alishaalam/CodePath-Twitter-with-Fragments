@@ -28,10 +28,6 @@
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/fragment_compose_tweet.xml",
-        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/layout/fragment_compose_tweet.xml"
-    },
-    {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_radio.xml"
     },
@@ -128,6 +124,10 @@
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_layout_snackbar.xml"
     },
     {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/fragment_dialog_compose_tweet.xml",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/layout/fragment_dialog_compose_tweet.xml"
+    },
+    {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_menu_layout.xml"
     },
@@ -202,6 +202,10 @@
     {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/fragments_tweets_list.xml",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/layout/fragments_tweets_list.xml"
     },
     {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",

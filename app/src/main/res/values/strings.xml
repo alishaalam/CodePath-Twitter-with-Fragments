@@ -9,5 +9,9 @@
     <string name="title_activity_tweet_detail">Tweet</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_test">Test</string>
+    <string name="no_connectivity_text">No network connection</string>
+    <string name="no_internet_text">Device is not connected to the internet</string>
+    <string name="error_in_response">Error in receiving response</string>
+    <string name="tweets">Tweets</string>
 
 </resources>

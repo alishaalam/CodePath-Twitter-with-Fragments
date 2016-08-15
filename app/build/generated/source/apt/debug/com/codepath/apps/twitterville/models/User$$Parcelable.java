@@ -11,7 +11,7 @@ import org.parceler.Generated;
 import org.parceler.ParcelWrapper;
 import org.parceler.ParcelerRuntimeException;
 
-@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-12T14:27-0700")
+@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-14T18:37-0700")
 @SuppressWarnings({
     "unchecked",
     "deprecation"
@@ -22,7 +22,7 @@ public class User$$Parcelable
 
     private com.codepath.apps.twitterville.models.User user$$0;
     @SuppressWarnings("UnusedDeclaration")
-    public final static User$$Parcelable.Creator$$1 CREATOR = new User$$Parcelable.Creator$$1();
+    public final static User$$Parcelable.Creator$$2 CREATOR = new User$$Parcelable.Creator$$2();
 
     public User$$Parcelable(com.codepath.apps.twitterville.models.User user$$2) {
         user$$0 = user$$2;
@@ -48,11 +48,15 @@ public class User$$Parcelable
                     parcel$$1 .writeInt(1);
                     parcel$$1 .writeLong(user$$1 .uid);
                 }
+                parcel$$1 .writeLong(user$$1 .friends_count);
                 parcel$$1 .writeString(user$$1 .profileBackgroundImageUrl);
+                parcel$$1 .writeInt((user$$1 .following? 1 : 0));
+                parcel$$1 .writeLong(user$$1 .followers_count);
                 parcel$$1 .writeString(user$$1 .name);
                 parcel$$1 .writeString(user$$1 .description);
                 parcel$$1 .writeString(user$$1 .screenName);
                 parcel$$1 .writeString(user$$1 .profileImageUrl);
+                parcel$$1 .writeInt((user$$1 .favorite? 1 : 0));
             }
         }
     }
@@ -93,17 +97,21 @@ public class User$$Parcelable
                 long$$0 = parcel$$3 .readLong();
             }
             user$$5 .uid = long$$0;
+            user$$5 .friends_count = parcel$$3 .readLong();
             user$$5 .profileBackgroundImageUrl = parcel$$3 .readString();
+            user$$5 .following = (parcel$$3 .readInt() == 1);
+            user$$5 .followers_count = parcel$$3 .readLong();
             user$$5 .name = parcel$$3 .readString();
             user$$5 .description = parcel$$3 .readString();
             user$$5 .screenName = parcel$$3 .readString();
             user$$5 .profileImageUrl = parcel$$3 .readString();
+            user$$5 .favorite = (parcel$$3 .readInt() == 1);
             user$$3 = user$$5;
         }
         return user$$3;
     }
 
-    public final static class Creator$$1
+    public final static class Creator$$2
         implements Creator<User$$Parcelable>
     {
 

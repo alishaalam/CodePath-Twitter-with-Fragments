@@ -1,2 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_92754abecfad3c26476114c153c59517140bd65d.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/libs/codepath-utils.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9a9f67173c34e04d2d5609283d43f3006cc4d947">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/codepath-utils_579697e2e395512356a73183a922fefaccbd76d6.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="07aa74f1dee90d22616f6aa98a65bea8458cf671">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.codepath.libraries-android-oauth-handler-1.0.0_04d427ca403b876cfa81a52d34005be5318e2fe6.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.astuetz-pagerslidingtabstrip-1.0.1_136773eff820c66f9a92b4095fad022bf92f0130.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.5.3/a8b8a6dfc8a17890e4c7ff8aed810763d265b68b/jackson-core-2.5.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a8b8a6dfc8a17890e4c7ff8aed810763d265b68b">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/jackson-core-2.5.3_eca1132a0cd1bbc234c298121d2a15e35ad6522c.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.2.1/d6f54d76edfbe779a50a8636b10fd3f555d8f780/butterknife-annotations-8.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/butterknife-annotations-8.2.1_47a96a4a1d4df2582179fa736a2d66d0014da9a6.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.9_5a66a34a6783133f80d5fc5b8c0ad38df829a060.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_a7af35250336df20c3e70adac6e19bb9669cf0f8.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_2f198ff199f9fa002c2e12ddf4e637d18e3c2812.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.5.2/ecf534dba3a8446ce84cbb797d314763be212a68/glide-3.5.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/glide-3.5.2_ba4c2a97ff8d64554dac9c9abd1e28e398db1edd.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/org.parceler/parceler-api/1.1.1/d081ad6f7c51627ebe2dbf157cc525cbf5e9c821/parceler-api-1.1.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d081ad6f7c51627ebe2dbf157cc525cbf5e9c821">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/parceler-api-1.1.1_81973252edc0248e1c41f9476bb77c5b2e3b25fd.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/tyrantgit/explosionfield/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f82998f0794dfe2b65edd561ac0b34b536e7ff9a">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/tyrantgit-explosionfield-1.0.1_12208bf464f81c98bac6d9a677eb6920a4ded518.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.jakewharton-butterknife-8.2.1_3ba4a3cff51a67e1f1af359b5d85a5775d75b39a.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.5.3/c37875ff66127d93e5f672708cb2dcc14c8232ab/jackson-databind-2.5.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c37875ff66127d93e5f672708cb2dcc14c8232ab">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/jackson-databind-2.5.3_e7a63ee32769fde60595f68cb70ca775d6b80270.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/org.ocpsoft.prettytime/prettytime/3.2.0.Final/91e58fc02dede2bfb048580a0f97425c2d861bfd/prettytime-3.2.0.Final.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="91e58fc02dede2bfb048580a0f97425c2d861bfd">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/prettytime-3.2.0.Final_191195ce7eb9a67208779a044d5ae9b206bca985.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_bb77c2ef8af70bd017d1676fbe89b7469edcd89c.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_e807ce5a30df9af3912f1082fd93f2239570d6cc.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3d2ba852ca4cb07c2e9ecbd9a56ff9456025e344">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3_1109d4edb6a68b2388c83b591a61c80ea933ac6d.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_3af9ab3b807c19c269393103e703b839a4d31512.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/libs/org.apache.http.legacy.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/org.apache.http.legacy_aeeb90ddb855509eb82085de878c7ad1aa36597f.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_9f83ae4ea658c0dc9ae629742ca17fc076a3530c.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.5.3/ade455ede4797ed450ca6a56e589a81278fc8f45/jackson-annotations-2.5.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ade455ede4797ed450ca6a56e589a81278fc8f45">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.5.3_1ae2c9022c7b58ab1f19328c00cc36d4af45f19a.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT_12e846ccfe71eed8517d050787778b70cccdb541.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.1.1_74b76106ce5027d7c2c21576479c9fa4666e2880.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_4540b991ba214fc5ee36d8f4c9b1deb0600774df.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.skyfishjy.ripplebackground/library/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5a7cf2a41aedccc427107ebb37762a5e2f5be590">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/com.skyfishjy.ripplebackground-library-1.0.1_6baf976ae7f97b4a1ba1001772d57a662d2e8ae1.jar" />
+    </item>
+    <item
+        jar="/Users/alishaalam/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/pre-dexed/debug/httpclient-4.3.6_1bba3ef46a63e1ac99f763a78cc08224941d579e.jar" />
+    </item>
+
+</items>

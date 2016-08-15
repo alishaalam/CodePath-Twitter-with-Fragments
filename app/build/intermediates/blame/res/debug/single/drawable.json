@@ -76,6 +76,10 @@
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable/background_tab.xml",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/res/drawable/background_tab.xml"
+    },
+    {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/drawable/design_snackbar_background.xml"
     },

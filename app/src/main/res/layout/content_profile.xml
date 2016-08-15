@@ -67,4 +67,82 @@
         android:textIsSelectable="true"
         android:autoLink="web"
         android:linksClickable="true"/>
+
+    <TextView
+        android:id="@+id/friends_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/user_description"
+        android:layout_below="@id/user_description"
+        tools:text="2833"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/following_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/friends_count"
+        android:layout_toRightOf="@+id/friends_count"
+        android:text="FOLLOWING"
+        android:textAllCaps="true"
+        android:textColor="@android:color/darker_gray"
+        android:layout_margin="5dp"/>
+
+
+    <TextView
+        android:id="@+id/followers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_alignBaseline="@+id/following_text"
+        android:layout_toRightOf="@id/following_text"
+        android:textColor="@android:color/black"
+        tools:text="7.5M"
+        />
+
+    <TextView
+        android:id="@+id/followers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/followers_count"
+        android:layout_toRightOf="@+id/followers_count"
+        android:textColor="@android:color/darker_gray"
+        android:text="FOLLOWERS"
+        android:textAllCaps="true"
+        android:layout_margin="5dp"/>
+
+    <View style="@style/Divider"
+        android:id="@+id/action_divider"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/followers_text"/>
+
+    <TextView
+        android:id="@+id/tweet_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tweets"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/action_divider"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <View style="@style/Divider"
+        android:id="@+id/action_divider2"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tweet_heading"/>
+
+    <FrameLayout
+        android:id="@+id/fl_fragment_user_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tweet_heading"
+        android:layout_alignLeft="@+id/action_divider2"
+        android:layout_alignStart="@+id/action_divider2"></FrameLayout>
+
+
 </RelativeLayout>

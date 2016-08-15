@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/menu/menu_timeline.xml",
+        "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/menu/menu_timeline.xml"
+    },
+    {
         "merged": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/build/intermediates/res/merged/debug/menu/menu_detail.xml",
         "source": "/Users/alishaalam/Documents/Development/CodePath/TwitterFrag/app/src/main/res/menu/menu_detail.xml"
     },

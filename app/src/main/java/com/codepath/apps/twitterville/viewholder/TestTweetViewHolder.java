@@ -44,11 +44,8 @@ public class TestTweetViewHolder extends RecyclerView.ViewHolder{
         super(itemView);
         this.mContext = ctx;
         ButterKnife.bind(this,itemView);
-        vTweetProfilePic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        vTweetProfilePic.setOnClickListener(v -> {
 
-            }
         });
     }
 

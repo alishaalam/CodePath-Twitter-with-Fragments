@@ -3,12 +3,14 @@ package org.parceler;
 
 import java.util.HashMap;
 import java.util.Map;
+import com.codepath.apps.twitterville.models.Messages;
+import com.codepath.apps.twitterville.models.Messages$$Parcelable;
 import com.codepath.apps.twitterville.models.Tweet;
 import com.codepath.apps.twitterville.models.Tweet$$Parcelable;
 import com.codepath.apps.twitterville.models.User;
 import com.codepath.apps.twitterville.models.User$$Parcelable;
 
-@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-12T14:27-0700")
+@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-14T18:37-0700")
 @SuppressWarnings({
     "unchecked",
     "deprecation"
@@ -21,11 +23,24 @@ public class Parceler$$Parcels
 
     public Parceler$$Parcels() {
         map$$0 .put(Tweet.class, new Parceler$$Parcels.Tweet$$Parcelable$$0());
+        map$$0 .put(Messages.class, new Parceler$$Parcels.Messages$$Parcelable$$0());
         map$$0 .put(User.class, new Parceler$$Parcels.User$$Parcelable$$0());
     }
 
     public Map<Class, org.parceler.Parcels.ParcelableFactory> get() {
         return map$$0;
+    }
+
+    private final static class Messages$$Parcelable$$0
+        implements org.parceler.Parcels.ParcelableFactory<Messages>
+    {
+
+
+        @Override
+        public Messages$$Parcelable buildParcelable(Messages input) {
+            return new Messages$$Parcelable(input);
+        }
+
     }
 
     private final static class Tweet$$Parcelable$$0

@@ -21,6 +21,11 @@ public class User extends Model {
     public String profileImageUrl;
     public String profileBackgroundImageUrl;
     public String description;
+    public boolean following;
+    public boolean favorite;
+    public long friends_count;
+    public long followers_count;
+
 
     public User(){ super(); }
 
@@ -50,11 +55,15 @@ public class User extends Model {
             u.description = json.getString("description");
             u.profileImageUrl = json.getString("profile_image_url");
             u.profileBackgroundImageUrl = json.getString("profile_banner_url");
+            u.following = json.getBoolean("following");
+            u.favorite = json.getJSONObject("status").getBoolean("favorited");
+            u.friends_count=json.getLong("friends_count");
+            u.followers_count=json.getLong("followers_count");
+
             u.save();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return u;
     }
 
@@ -68,6 +77,22 @@ public class User extends Model {
 
     public String getDescription() {
         return description;
+    }
+
+    public boolean isFollowing() {
+        return following;
+    }
+
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public long getFriends_count() {
+        return friends_count;
+    }
+
+    public long getFollowers_count() {
+        return followers_count;
     }
 
     public String getName() {
@@ -92,4 +117,5 @@ public class User extends Model {
                 .where("Uid = ?", userId)
                 .limit(1).executeSingle();
     }
+
 }

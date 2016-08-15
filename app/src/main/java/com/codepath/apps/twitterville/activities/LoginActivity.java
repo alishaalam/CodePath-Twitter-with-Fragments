@@ -44,12 +44,10 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	// i.e Display application "homepage"
 	@Override
 	public void onLoginSuccess() {
-		mHandler.postDelayed(new Runnable() {
-			public void run() {
-				Intent i = new Intent(LoginActivity.this, TimeLineActivity.class);
-				startActivity(i);
-			}
-		}, 3000);
+		mHandler.postDelayed(() -> {
+            Intent i = new Intent(LoginActivity.this, TimeLineActivity.class);
+            startActivity(i);
+        }, 3000);
 	}
 
 	// OAuth authentication flow failed, handle the error
@@ -96,13 +94,11 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		if(COUNTER == 0)
 			rippleBackground.startRippleAnimation();
 		else {
-			mHandler.postDelayed(new Runnable() {
-				public void run() {
-					mExplosionField.explode(v);
-					mExplosionField.explode(findViewById(R.id.btn_login));
-					Log.v(TAG, "Explosion!!!!!!!!!!!");
-				}
-			}, 2000);
+			mHandler.postDelayed(() -> {
+                mExplosionField.explode(v);
+                mExplosionField.explode(findViewById(R.id.btn_login));
+                Log.v(TAG, "Explosion!!!!!!!!!!!");
+            }, 2000);
 		}
 		COUNTER++;
 	}

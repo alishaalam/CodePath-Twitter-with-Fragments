@@ -11,7 +11,7 @@ import org.parceler.Generated;
 import org.parceler.ParcelWrapper;
 import org.parceler.ParcelerRuntimeException;
 
-@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-12T14:27-0700")
+@Generated(value = "org.parceler.ParcelAnnotationProcessor", date = "2016-08-14T18:37-0700")
 @SuppressWarnings({
     "unchecked",
     "deprecation"
@@ -22,7 +22,7 @@ public class Tweet$$Parcelable
 
     private com.codepath.apps.twitterville.models.Tweet tweet$$0;
     @SuppressWarnings("UnusedDeclaration")
-    public final static Tweet$$Parcelable.Creator$$0 CREATOR = new Tweet$$Parcelable.Creator$$0();
+    public final static Tweet$$Parcelable.Creator$$1 CREATOR = new Tweet$$Parcelable.Creator$$1();
 
     public Tweet$$Parcelable(com.codepath.apps.twitterville.models.Tweet tweet$$2) {
         tweet$$0 = tweet$$2;
@@ -114,7 +114,7 @@ public class Tweet$$Parcelable
         return tweet$$3;
     }
 
-    public final static class Creator$$0
+    public final static class Creator$$1
         implements Creator<Tweet$$Parcelable>
     {
 

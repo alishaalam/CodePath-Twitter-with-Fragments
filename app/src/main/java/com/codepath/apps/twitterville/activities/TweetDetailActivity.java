@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -83,12 +82,7 @@ public class TweetDetailActivity extends AppCompatActivity implements ComposeTwe
 
 
         et_tweet_reply.setHint("Reply to " + mTweet.getUser().getScreenName());
-        et_tweet_reply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentUtil.showComposeTweetDialog(getSupportFragmentManager(), mTweet.getUser().getScreenName());
-            }
-        });
+        et_tweet_reply.setOnClickListener(v -> FragmentUtil.showComposeTweetDialog(getSupportFragmentManager(), mTweet.getUser().getScreenName()));
     }
 
     @Override
